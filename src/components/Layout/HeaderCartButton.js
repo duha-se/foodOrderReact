@@ -1,8 +1,9 @@
-import  { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import classes from "./HeaderCartButton.module.css";
 import CartIcon from "../Cart/CartIcon";
 import CartContext from "../../store/cart-context";
- const HeaderCartButton=(props) =>{
+
+const HeaderCartButton = (props) => {
   const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
   const cartCtx = useContext(CartContext);
   const { items } = cartCtx;
@@ -33,5 +34,5 @@ import CartContext from "../../store/cart-context";
       <span className={classes.badge}>{numOfCartItems}</span>
     </button>
   );
-}
+};
 export default HeaderCartButton;
